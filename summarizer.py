@@ -12,7 +12,7 @@ def clean_text(file_name):
     sentences = []
     # removing special characters and extra whitespaces
     for sentence in article:
-        sentence = re.sub('[^a-zA-Z]', ' ', str(sentence))
+        sentence = re.sub('[^a-zA-Z][0-9]', ' ', str(sentence))
         sentence = re.sub('[\s+]', ' ', sentence)
         sentences.append(sentence)
     sentences.pop()
